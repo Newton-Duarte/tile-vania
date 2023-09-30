@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SPA_Player_Ginger_0
+      name: Player_atack1
       rect:
         serializedVersion: 2
         x: 0
@@ -118,7 +118,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -131,7 +131,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPA_Player_Ginger_1
+      name: Player_atack2
       rect:
         serializedVersion: 2
         x: 38
@@ -139,7 +139,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -152,7 +152,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPA_Player_Ginger_2
+      name: Player_atack3
       rect:
         serializedVersion: 2
         x: 76
@@ -160,7 +160,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -173,7 +173,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPA_Player_Ginger_3
+      name: Player_atack4
       rect:
         serializedVersion: 2
         x: 114
@@ -181,7 +181,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -194,7 +194,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPA_Player_Ginger_4
+      name: Player_atack5
       rect:
         serializedVersion: 2
         x: 152
@@ -202,7 +202,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -215,7 +215,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPA_Player_Ginger_5
+      name: Player_idle1
       rect:
         serializedVersion: 2
         x: 0
@@ -223,7 +223,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -236,7 +236,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPA_Player_Ginger_6
+      name: Player_idle2
       rect:
         serializedVersion: 2
         x: 38
@@ -244,7 +244,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -257,7 +257,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPA_Player_Ginger_7
+      name: Player_idle3
       rect:
         serializedVersion: 2
         x: 76
@@ -265,7 +265,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -278,7 +278,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPA_Player_Ginger_8
+      name: Player_idle4
       rect:
         serializedVersion: 2
         x: 114
@@ -286,7 +286,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -299,7 +299,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPA_Player_Ginger_9
+      name: Player_roll1
       rect:
         serializedVersion: 2
         x: 0
@@ -307,7 +307,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -320,7 +320,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPA_Player_Ginger_10
+      name: Player_roll2
       rect:
         serializedVersion: 2
         x: 38
@@ -328,7 +328,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -341,7 +341,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPA_Player_Ginger_11
+      name: Player_roll3
       rect:
         serializedVersion: 2
         x: 76
@@ -349,7 +349,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -362,7 +362,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPA_Player_Ginger_12
+      name: Player_roll4
       rect:
         serializedVersion: 2
         x: 114
@@ -370,7 +370,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -383,7 +383,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPA_Player_Ginger_13
+      name: Player_roll5
       rect:
         serializedVersion: 2
         x: 152
@@ -391,7 +391,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -404,7 +404,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPA_Player_Ginger_14
+      name: Player_stair1
       rect:
         serializedVersion: 2
         x: 0
@@ -412,7 +412,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -425,7 +425,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPA_Player_Ginger_15
+      name: Player_stair2
       rect:
         serializedVersion: 2
         x: 38
@@ -433,7 +433,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -446,7 +446,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPA_Player_Ginger_16
+      name: Player_jump1
       rect:
         serializedVersion: 2
         x: 0
@@ -454,7 +454,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -467,7 +467,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPA_Player_Ginger_17
+      name: Player_jump2
       rect:
         serializedVersion: 2
         x: 38
@@ -475,7 +475,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -488,7 +488,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPA_Player_Ginger_18
+      name: Player_jump3
       rect:
         serializedVersion: 2
         x: 76
@@ -496,7 +496,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -509,7 +509,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPA_Player_Ginger_19
+      name: Player_run1
       rect:
         serializedVersion: 2
         x: 0
@@ -517,7 +517,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -530,7 +530,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPA_Player_Ginger_20
+      name: Player_run2
       rect:
         serializedVersion: 2
         x: 38
@@ -538,7 +538,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -551,7 +551,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPA_Player_Ginger_21
+      name: Player_run3
       rect:
         serializedVersion: 2
         x: 76
@@ -559,7 +559,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -572,7 +572,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPA_Player_Ginger_22
+      name: Player_run4
       rect:
         serializedVersion: 2
         x: 114
@@ -580,7 +580,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -593,7 +593,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPA_Player_Ginger_23
+      name: Player_run5
       rect:
         serializedVersion: 2
         x: 152
@@ -601,7 +601,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -614,7 +614,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPA_Player_Ginger_24
+      name: Player_run6
       rect:
         serializedVersion: 2
         x: 190
@@ -622,7 +622,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -635,7 +635,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPA_Player_Ginger_25
+      name: Player_run7
       rect:
         serializedVersion: 2
         x: 228
@@ -643,7 +643,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -656,7 +656,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPA_Player_Ginger_26
+      name: Player_run8
       rect:
         serializedVersion: 2
         x: 266
@@ -664,7 +664,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -677,7 +677,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPA_Player_Ginger_27
+      name: Player_run9
       rect:
         serializedVersion: 2
         x: 304
@@ -685,7 +685,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -698,7 +698,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SPA_Player_Ginger_28
+      name: Player_run10
       rect:
         serializedVersion: 2
         x: 342
@@ -706,7 +706,7 @@ TextureImporter:
         width: 32
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -729,35 +729,35 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      SPA_Player_Ginger_0: 1381153806
-      SPA_Player_Ginger_1: -660142358
-      SPA_Player_Ginger_10: 1182002613
-      SPA_Player_Ginger_11: 1579062099
-      SPA_Player_Ginger_12: 1962854977
-      SPA_Player_Ginger_13: 678387199
-      SPA_Player_Ginger_14: 284900470
-      SPA_Player_Ginger_15: -829211656
-      SPA_Player_Ginger_16: -1888424243
-      SPA_Player_Ginger_17: 885556561
-      SPA_Player_Ginger_18: -1339874851
-      SPA_Player_Ginger_19: -55027805
-      SPA_Player_Ginger_2: 703234886
-      SPA_Player_Ginger_20: -1044303123
-      SPA_Player_Ginger_21: -350172663
-      SPA_Player_Ginger_22: 2142347622
-      SPA_Player_Ginger_23: -1544437644
-      SPA_Player_Ginger_24: 536391060
-      SPA_Player_Ginger_25: -1744178549
-      SPA_Player_Ginger_26: -2054111554
-      SPA_Player_Ginger_27: 1878365936
-      SPA_Player_Ginger_28: 1894759951
-      SPA_Player_Ginger_3: 1217201794
-      SPA_Player_Ginger_4: 739696886
-      SPA_Player_Ginger_5: -21327213
-      SPA_Player_Ginger_6: 161766311
-      SPA_Player_Ginger_7: 1746312742
-      SPA_Player_Ginger_8: -1498186987
-      SPA_Player_Ginger_9: 414165576
+      Player_atack1: 1381153806
+      Player_atack2: -660142358
+      Player_atack3: 703234886
+      Player_atack4: 1217201794
+      Player_atack5: 739696886
+      Player_idle1: -21327213
+      Player_idle2: 161766311
+      Player_idle3: 1746312742
+      Player_idle4: -1498186987
+      Player_jump1: -1888424243
+      Player_jump2: 885556561
+      Player_jump3: -1339874851
+      Player_roll1: 414165576
+      Player_roll2: 1182002613
+      Player_roll3: 1579062099
+      Player_roll4: 1962854977
+      Player_roll5: 678387199
+      Player_run1: -55027805
+      Player_run10: 1894759951
+      Player_run2: -1044303123
+      Player_run3: -350172663
+      Player_run4: 2142347622
+      Player_run5: -1544437644
+      Player_run6: 536391060
+      Player_run7: -1744178549
+      Player_run8: -2054111554
+      Player_run9: 1878365936
+      Player_stair1: 284900470
+      Player_stair2: -829211656
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
