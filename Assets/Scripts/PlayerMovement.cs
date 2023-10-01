@@ -1,6 +1,8 @@
+using Cinemachine;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,16 +11,20 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float moveSpeed = 5f;
     [SerializeField] float jumpForce = 5f;
     [SerializeField] float climbForce = 5f;
+    [SerializeField] string[] hazardTags = new string[] { "Enemy", "Hazard" };
 
+    CinemachineImpulseSource cameraImpulseSource;
     Rigidbody2D rb;
     Animator animator;
     CapsuleCollider2D bodyCollider;
     BoxCollider2D feetCollider;
     Vector2 moveInput;
     float baseGravity;
+    bool isAlive = true;
 
     void Start()
     {
+        cameraImpulseSource = GetComponent<CinemachineImpulseSource>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
         bodyCollider = GetComponent<CapsuleCollider2D>();
@@ -28,6 +34,8 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (!isAlive) return;
+
         Run();
         FlipSprite();
         ClimbLadder();
@@ -52,6 +60,8 @@ public class PlayerMovement : MonoBehaviour
 
     void OnMove(InputValue value)
     {
+        if (!isAlive) return;
+
         moveInput = value.Get<Vector2>();
     }
 
@@ -78,5 +88,22 @@ public class PlayerMovement : MonoBehaviour
         rb.gravityScale = 0f;
 
         animator.SetBool("isClimbing", isPlayerClimbing);
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (hazardTags.Contains(collision.gameObject.tag) && isAlive)
+        {
+            Die();
+        }
+    }
+
+    private void Die()
+    {
+        isAlive = false;
+        cameraImpulseSource.GenerateImpulse(0.25f);
+        rb.velocity = new Vector2(10f, 15f);
+        rb.velocity = new Vector2(0f, rb.velocity.y);
+        animator.SetTrigger("Die");
     }
 }
