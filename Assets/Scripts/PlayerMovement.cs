@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Transform weapon;
     [SerializeField] AudioClip bowClip;
     [SerializeField] AudioClip jumpClip;
+    [SerializeField] AudioClip spikeClip;
     [SerializeField] AudioClip dieClip;
 
     CinemachineImpulseSource cameraImpulseSource;
@@ -116,6 +117,11 @@ public class PlayerMovement : MonoBehaviour
         if (hazardTags.Contains(collision.gameObject.tag) && isAlive)
         {
             Die();
+        }
+
+        if (collision.gameObject.tag == "Hazard")
+        {
+            gameManager.PlaySFXClip(spikeClip);
         }
     }
 
