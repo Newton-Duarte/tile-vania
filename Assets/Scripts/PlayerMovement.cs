@@ -12,6 +12,11 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] float jumpForce = 5f;
     [SerializeField] float climbForce = 5f;
     [SerializeField] string[] hazardTags = new string[] { "Enemy", "Hazard" };
+    [SerializeField] GameObject bullet;
+    [SerializeField] Transform weapon;
+    [SerializeField] AudioClip bowClip;
+    [SerializeField] AudioClip jumpClip;
+    [SerializeField] AudioClip dieClip;
 
     CinemachineImpulseSource cameraImpulseSource;
     Rigidbody2D rb;
@@ -22,8 +27,11 @@ public class PlayerMovement : MonoBehaviour
     float baseGravity;
     bool isAlive = true;
 
+    GameManager gameManager;
+
     void Start()
     {
+        gameManager = FindAnyObjectByType<GameManager>();
         cameraImpulseSource = GetComponent<CinemachineImpulseSource>();
         rb = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -58,6 +66,18 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    void OnFire(InputValue value)
+    {
+        if (!isAlive) return;
+        animator.SetTrigger("Atack");
+    }
+
+    public void Shoot()
+    {
+        gameManager.PlaySFXClip(bowClip);
+        Instantiate(bullet, weapon.transform.position, bullet.transform.rotation);
+    }
+
     void OnMove(InputValue value)
     {
         if (!isAlive) return;
@@ -72,6 +92,7 @@ public class PlayerMovement : MonoBehaviour
         if (value.isPressed)
         {
             rb.velocity += new Vector2(0f, jumpForce);
+            gameManager.PlaySFXClip(jumpClip);
         }
     }
 
@@ -101,9 +122,11 @@ public class PlayerMovement : MonoBehaviour
     private void Die()
     {
         isAlive = false;
+        gameManager.PlaySFXClip(dieClip);
         cameraImpulseSource.GenerateImpulse(0.25f);
         rb.velocity = new Vector2(10f, 15f);
         rb.velocity = new Vector2(0f, rb.velocity.y);
         animator.SetTrigger("Die");
+        FindAnyObjectByType<GameManager>().ProcessPlayerDeath();
     }
 }
