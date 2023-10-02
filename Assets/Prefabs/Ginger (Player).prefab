@@ -125,7 +125,7 @@ SpriteRenderer:
   m_SpriteSortPoint: 0
 --- !u!95 &6643301351862915623
 Animator:
-  serializedVersion: 5
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -139,6 +139,7 @@ Animator:
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
@@ -179,6 +180,7 @@ CapsuleCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6593240340455798480}
   m_Enabled: 1
+  serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 2d86a6230fad792498dc7ce5affffe18, type: 2}
   m_IncludeLayers:
@@ -202,7 +204,8 @@ CapsuleCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
   m_Offset: {x: -0.060438156, y: -0.04733625}
   m_Size: {x: 0.60159683, y: 0.7515634}
   m_Direction: 0
@@ -214,6 +217,7 @@ BoxCollider2D:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6593240340455798480}
   m_Enabled: 1
+  serializedVersion: 3
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 2d86a6230fad792498dc7ce5affffe18, type: 2}
   m_IncludeLayers:
@@ -237,7 +241,8 @@ BoxCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_UsedByComposite: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
   m_Offset: {x: -0.04293728, y: -0.46595058}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
@@ -248,7 +253,6 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
   m_Size: {x: 0.44976616, y: 0.06809884}
   m_EdgeRadius: 0
 --- !u!114 &1900363568469752178
@@ -303,6 +307,7 @@ MonoBehaviour:
   weapon: {fileID: 5575426674201748063}
   bowClip: {fileID: 8300000, guid: 901a8c6507026a84bae4761019960396, type: 3}
   jumpClip: {fileID: 8300000, guid: d6d5d83d489c04e439d1779a535ca28c, type: 3}
+  spikeClip: {fileID: 8300000, guid: 5af2f39c1096497499b4608043c8103a, type: 3}
   dieClip: {fileID: 8300000, guid: 80c2282e85b22fc49b744203ada9404b, type: 3}
 --- !u!114 &104272276767434415
 MonoBehaviour:
