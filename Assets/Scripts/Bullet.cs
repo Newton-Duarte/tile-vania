@@ -26,7 +26,7 @@ public class Bullet : MonoBehaviour
     {
         if (collision.tag == "Enemy")
         {
-            FindObjectOfType<GameManager>().PlaySFXClip(bulletClip);
+            FindAnyObjectByType<GameManager>().PlaySFXClip(bulletClip);
             Destroy(collision.gameObject);
         }
 
@@ -37,7 +37,7 @@ public class Bullet : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            FindObjectOfType<GameManager>().PlaySFXClip(bulletClip);
+            FindAnyObjectByType<GameManager>().PlaySFXClip(bulletClip);
             Destroy(collision.gameObject);
         }
 
