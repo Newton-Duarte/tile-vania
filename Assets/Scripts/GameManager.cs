@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
 
     void Awake()
     {
-        int numOfGameManager = FindObjectsOfType<GameManager>().Length;
+        int numOfGameManager = FindObjectsByType<GameManager>(FindObjectsSortMode.None).Length;
         if (numOfGameManager > 1)
         {
             Destroy(gameObject);
@@ -61,7 +61,7 @@ public class GameManager : MonoBehaviour
 
     void ResetGame()
     {
-        FindObjectOfType<ScenePersist>().ResetScenePersist();
+        FindAnyObjectByType<ScenePersist>().ResetScenePersist();
         SceneManager.LoadScene(0);
         Destroy(gameObject);
     }
