@@ -14,7 +14,7 @@ public class ExitLevel : MonoBehaviour
 
     IEnumerator LoadNextLevel()
     {
-        FindObjectOfType<GameManager>().PlaySFXClip(exitClip);
+        FindAnyObjectByType<GameManager>().PlaySFXClip(exitClip);
         yield return new WaitForSecondsRealtime(loadLevelDelay);
 
         int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
@@ -25,7 +25,7 @@ public class ExitLevel : MonoBehaviour
             nextSceneIndex = 0;
         }
 
-        FindObjectOfType<ScenePersist>().ResetScenePersist();
+        FindAnyObjectByType<ScenePersist>().ResetScenePersist();
         SceneManager.LoadScene(nextSceneIndex);
     }
 }
