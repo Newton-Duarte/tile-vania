@@ -4,7 +4,7 @@ public class ScenePersist : MonoBehaviour
 {
     void Awake()
     {
-        int numOfScenePersists = FindObjectsOfType<ScenePersist>().Length;
+        int numOfScenePersists = FindObjectsByType<ScenePersist>(FindObjectsSortMode.None).Length;
         if (numOfScenePersists > 1)
         {
             Destroy(gameObject);
