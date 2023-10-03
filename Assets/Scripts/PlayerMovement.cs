@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] AudioClip bowClip;
     [SerializeField] AudioClip jumpClip;
     [SerializeField] AudioClip spikeClip;
+    [SerializeField] AudioClip bouncyClip;
     [SerializeField] AudioClip dieClip;
 
     CinemachineImpulseSource cameraImpulseSource;
@@ -99,7 +100,7 @@ public class PlayerMovement : MonoBehaviour
 
     void ClimbLadder()
     {
-        if (!feetCollider.IsTouchingLayers(LayerMask.GetMask("Climbing")))
+        if (!bodyCollider.IsTouchingLayers(LayerMask.GetMask("Climbing")))
         {
             animator.SetBool("isClimbing", false);
             rb.gravityScale = baseGravity;
@@ -122,6 +123,11 @@ public class PlayerMovement : MonoBehaviour
         if (collision.gameObject.tag == "Hazard")
         {
             gameManager.PlaySFXClip(spikeClip);
+        }
+
+        if (collision.gameObject.tag == "Bouncy")
+        {
+            gameManager.PlaySFXClip(bouncyClip);
         }
     }
 
