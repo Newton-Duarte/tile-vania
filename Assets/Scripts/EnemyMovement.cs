@@ -1,16 +1,19 @@
-using System.Collections;
-using System.Collections.Generic;
+using System;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 1f;
+    [SerializeField] int hitPoints = 2;
 
     Rigidbody2D rb;
+    FlashEffect flashEffect;
+    bool isTakingDamage = false;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        flashEffect = GetComponent<FlashEffect>();
     }
 
     void Update()
@@ -25,7 +28,37 @@ public class EnemyMovement : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        moveSpeed = -moveSpeed;
-        Flip();
+        if (collision.tag != "Bullet")
+        {
+            moveSpeed = -moveSpeed;
+            Flip();
+        }
+    }
+
+    public void TakeDamage(int bulletDamage)
+    {
+        if (!isTakingDamage)
+        {
+            isTakingDamage = true;
+
+            flashEffect.Flash();
+            hitPoints -= bulletDamage;
+            Invoke(nameof(ResetIsTakingDamage), 0.1f);
+
+            if (hitPoints <= 0)
+            {
+                Die();
+            }
+        }
+    }
+
+    void Die()
+    {
+        Destroy(gameObject);
+    }
+
+    void ResetIsTakingDamage()
+    {
+        isTakingDamage = false;
     }
 }
