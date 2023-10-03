@@ -124,11 +124,6 @@ public class PlayerMovement : MonoBehaviour
         {
             gameManager.PlaySFXClip(spikeClip);
         }
-
-        if (collision.gameObject.tag == "Bouncy")
-        {
-            gameManager.PlaySFXClip(bouncyClip);
-        }
     }
 
     private void Die()
