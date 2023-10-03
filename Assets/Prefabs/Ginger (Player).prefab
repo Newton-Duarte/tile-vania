@@ -308,6 +308,7 @@ MonoBehaviour:
   bowClip: {fileID: 8300000, guid: 901a8c6507026a84bae4761019960396, type: 3}
   jumpClip: {fileID: 8300000, guid: d6d5d83d489c04e439d1779a535ca28c, type: 3}
   spikeClip: {fileID: 8300000, guid: 5af2f39c1096497499b4608043c8103a, type: 3}
+  bouncyClip: {fileID: 8300000, guid: 44708fbce9708ec4eacbac6ee7a4eb65, type: 3}
   dieClip: {fileID: 8300000, guid: 80c2282e85b22fc49b744203ada9404b, type: 3}
 --- !u!114 &104272276767434415
 MonoBehaviour:
