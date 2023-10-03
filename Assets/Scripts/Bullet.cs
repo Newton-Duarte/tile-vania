@@ -3,6 +3,7 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [SerializeField] float bulletSpeed = 10f;
+    [SerializeField] int bulletDamage = 1;
     [SerializeField] AudioClip bulletClip;
 
     PlayerMovement player;
@@ -27,7 +28,7 @@ public class Bullet : MonoBehaviour
         if (collision.tag == "Enemy")
         {
             FindAnyObjectByType<GameManager>().PlaySFXClip(bulletClip);
-            Destroy(collision.gameObject);
+            collision.gameObject.GetComponent<EnemyMovement>().TakeDamage(bulletDamage);
         }
 
         Destroy(gameObject);
@@ -38,7 +39,7 @@ public class Bullet : MonoBehaviour
         if (collision.gameObject.tag == "Enemy")
         {
             FindAnyObjectByType<GameManager>().PlaySFXClip(bulletClip);
-            Destroy(collision.gameObject);
+            collision.gameObject.GetComponent<EnemyMovement>().TakeDamage(bulletDamage);
         }
 
         Destroy(gameObject);
