@@ -8,6 +8,7 @@ TagManager:
   - Hazard
   - Bullet
   - Interactable
+  - Bouncy
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - Hazards
   - Bullet
   - Interactable
-  - 
+  - Bouncy
   - 
   - 
   - 
