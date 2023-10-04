@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] int playerLives = 3;
     [SerializeField] float loadDelay = 0.75f;
+    [SerializeField] float loadGameOverDelay = 3f;
 
     [SerializeField] AudioSource musicSource;
     [SerializeField] AudioSource sfxSource;
@@ -17,8 +18,14 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] TextMeshProUGUI livesText;
     [SerializeField] TextMeshProUGUI coinsText;
+    [SerializeField] AudioClip bonusLivesClip;
+    [SerializeField] AudioClip gameOverClip;
+    [SerializeField] float bonusLivesThresholdMultiplier = 1.5f;
 
     int coins;
+    int bonusLivesThreshold = 10;
+
+    Coroutine gameOverRoutine;
 
     void Awake()
     {
@@ -37,12 +44,13 @@ public class GameManager : MonoBehaviour
     {
         UpdateLivesText();
         UpdateCoinsText();
-        PlayMusic();
+        PlayMusic(musicClip);
     }
 
-    void PlayMusic()
+    public void PlayMusic(AudioClip music)
     {
-        musicSource.clip = musicClip;
+        musicSource.Stop();
+        musicSource.clip = music;
         musicSource.loop = true;
         musicSource.Play();
     }
@@ -57,6 +65,25 @@ public class GameManager : MonoBehaviour
         {
             Invoke(nameof(ResetGame), loadDelay);
         }
+    }
+
+    public void GameOver()
+    {
+        if (gameOverRoutine != null)
+        {
+            StopCoroutine(gameOverRoutine);
+        }
+
+        gameOverRoutine = StartCoroutine(LoadGameOver());
+    }
+
+    IEnumerator LoadGameOver()
+    {
+        musicSource.Stop();
+        PlaySFXClip(gameOverClip);
+        yield return new WaitForSeconds(loadGameOverDelay);
+        SceneManager.LoadScene("Gameover");
+        Destroy(gameObject);
     }
 
     void ResetGame()
@@ -76,6 +103,16 @@ public class GameManager : MonoBehaviour
     public void SetCoin(int coin)
     {
         coins += coin;
+
+        if (coins == bonusLivesThreshold)
+        {
+            coins = 0;
+            playerLives++;
+            bonusLivesThreshold = Convert.ToInt32(bonusLivesThreshold * bonusLivesThresholdMultiplier);
+            PlaySFXClip(bonusLivesClip);
+            UpdateLivesText();
+        }
+
         UpdateCoinsText();
     }
 
