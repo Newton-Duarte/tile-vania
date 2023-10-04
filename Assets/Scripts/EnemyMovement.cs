@@ -23,7 +23,7 @@ public class EnemyMovement : MonoBehaviour
 
     void Flip()
     {
-        transform.localScale = new Vector2(Mathf.Sign(moveSpeed), 1f);
+        transform.localScale = new Vector2(Mathf.Sign(moveSpeed) * Math.Abs(transform.localScale.x), transform.localScale.y);
     }
 
     void OnTriggerExit2D(Collider2D collision)
@@ -50,6 +50,13 @@ public class EnemyMovement : MonoBehaviour
                 Die();
             }
         }
+    }
+
+    public float MoveSpeed => moveSpeed;
+
+    public void SetMoveSpeed(float newMoveSpeed)
+    {
+        moveSpeed = newMoveSpeed;
     }
 
     void Die()
