@@ -2,8 +2,9 @@ using UnityEngine;
 
 public class Trampoline : MonoBehaviour
 {
-    [SerializeField] Transform jumpPoint;
+    [SerializeField] Transform jumpArea;
     [SerializeField] float jumpForce = 50f;
+    [SerializeField] float forceMultiplier = 1.25f;
     [SerializeField] AudioClip jumpClip;
 
     GameManager gameManager;
@@ -17,13 +18,14 @@ public class Trampoline : MonoBehaviour
     {
         if (!collision.gameObject.CompareTag("Player")) return;
 
-        var jumpPointHeight = jumpPoint.position.y;
-        var collisionPointHeight = collision.GetContact(0).point.y;
+        float jumpAreaY = jumpArea.position.y;
+        float collisionPointY = collision.GetContact(0).point.y;
+        bool collidesFromAbove = collisionPointY > jumpAreaY;
 
-        if (collisionPointHeight > jumpPointHeight)
+        if (collidesFromAbove)
         {
             bool isHoldingJumpButton = Input.GetButton("Jump");
-            collision.gameObject.GetComponent<Rigidbody2D>().velocity += new Vector2(0f, isHoldingJumpButton ? jumpForce * 1.5f : jumpForce);
+            collision.gameObject.GetComponent<Rigidbody2D>().velocity += new Vector2(0f, isHoldingJumpButton ? jumpForce * forceMultiplier : jumpForce);
             gameManager.PlaySFXClip(jumpClip);
         }
     }
