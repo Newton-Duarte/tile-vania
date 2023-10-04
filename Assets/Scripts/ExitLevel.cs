@@ -7,8 +7,17 @@ public class ExitLevel : MonoBehaviour
     [SerializeField] float loadLevelDelay = 0.75f;
     [SerializeField] AudioClip exitClip;
 
+    PlayerMovement player;
+
+    void Start()
+    {
+        player = FindAnyObjectByType<PlayerMovement>();
+    }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
+        if (!player.isAlive) return;
+
         StartCoroutine(LoadNextLevel());
     }
 
