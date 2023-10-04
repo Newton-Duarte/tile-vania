@@ -27,7 +27,7 @@ public class PlayerMovement : MonoBehaviour
     BoxCollider2D feetCollider;
     Vector2 moveInput;
     float baseGravity;
-    bool isAlive = true;
+    public bool isAlive { get; private set; } = true;
 
     GameManager gameManager;
 
@@ -118,12 +118,13 @@ public class PlayerMovement : MonoBehaviour
         if (hazardTags.Contains(collision.gameObject.tag) && isAlive)
         {
             Die();
+
+            if (collision.gameObject.tag == "Hazard")
+            {
+                gameManager.PlaySFXClip(spikeClip);
+            }
         }
 
-        if (collision.gameObject.tag == "Hazard")
-        {
-            gameManager.PlaySFXClip(spikeClip);
-        }
     }
 
     private void Die()
