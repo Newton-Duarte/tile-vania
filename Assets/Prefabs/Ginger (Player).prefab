@@ -299,7 +299,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 6
   jumpForce: 20
-  climbForce: 2.5
+  climbForce: 4
   hazardTags:
   - Enemy
   - Hazard
