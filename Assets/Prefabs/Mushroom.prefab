@@ -147,8 +147,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68da4279fb64d6240a91f4e29d817aa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpPoint: {fileID: 30027733285294529}
+  jumpArea: {fileID: 30027733285294529}
   jumpForce: 30
+  forceMultiplier: 1.25
   jumpClip: {fileID: 8300000, guid: 44708fbce9708ec4eacbac6ee7a4eb65, type: 3}
 --- !u!50 &417240665062791939
 Rigidbody2D:
@@ -192,7 +193,7 @@ TargetJoint2D:
   m_BreakTorque: Infinity
   m_BreakAction: 3
   m_Anchor: {x: 0, y: 0}
-  m_Target: {x: -14.911996, y: -2.6134148}
+  m_Target: {x: -2.66, y: -2.53}
   m_AutoConfigureTarget: 1
   m_MaxForce: 10000
   m_DampingRatio: 1
@@ -207,7 +208,7 @@ GameObject:
   m_Component:
   - component: {fileID: 30027733285294529}
   m_Layer: 14
-  m_Name: CollisionPoint
+  m_Name: JumpArea
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
