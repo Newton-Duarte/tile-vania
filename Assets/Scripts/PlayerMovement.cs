@@ -1,7 +1,5 @@
 using Cinemachine;
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.InputSystem;
@@ -27,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
     BoxCollider2D feetCollider;
     Vector2 moveInput;
     float baseGravity;
+    Invulnerability invulnerability;
     public bool isAlive { get; private set; } = true;
 
     GameManager gameManager;
@@ -40,6 +39,7 @@ public class PlayerMovement : MonoBehaviour
         bodyCollider = GetComponent<CapsuleCollider2D>();
         feetCollider = GetComponent<BoxCollider2D>();
         baseGravity = rb.gravityScale;
+        invulnerability = GetComponent<Invulnerability>();
     }
 
     void FixedUpdate()
@@ -115,6 +115,8 @@ public class PlayerMovement : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        if (invulnerability.isInvulnerable) return;
+
         if (hazardTags.Contains(collision.gameObject.tag) && isAlive)
         {
             Die();
